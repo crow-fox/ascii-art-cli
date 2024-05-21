@@ -36,4 +36,4 @@ const defaultConfig: DefaultConfig = {
 
 export const config = { ...defaultConfig, ...customConfig };
 
-export type Config = Partial<typeof defaultConfig>;
+export type Config = Partial<DefaultConfig>;
