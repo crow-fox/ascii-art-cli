@@ -1,7 +1,7 @@
 import { Image } from "https://deno.land/x/imagescript@1.3.0/mod.ts";
 
 // モノクロ画像を作成
-export function monochrome(image: Image): Image {
+export function toMonochrome(image: Image): Image {
   const monochromeImage = image.clone();
 
   const bitmap = monochromeImage.bitmap;
