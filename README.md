@@ -1,4 +1,4 @@
-# ASCII-ART-GENERATOR
+# ascii-art-cli
 
 ## 事前準備
 
