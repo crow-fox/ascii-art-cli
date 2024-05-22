@@ -7,9 +7,10 @@ import { toMonochrome } from "./monochrome.ts";
 
 export async function main() {
   const inputEntries = await readEntries(config.inputDir, config.maxImageCount);
-  const inputImageFilesEntries = inputEntries.filter(filterImageFile);
   const inputImageFiles = await Promise.all(
-    inputImageFilesEntries.map((entry) => readFileData(config.inputDir, entry))
+    inputEntries
+      .filter(filterImageFile)
+      .map((entry) => readFileData(config.inputDir, entry))
   );
   const inputImageDatas = await Promise.all(inputImageFiles.map(readImageData));
 
